@@ -1,16 +1,16 @@
-import React, {Component} from "react";
-import Login from "../auth/login";
+import React, { Component } from "react";
+import Login from "../auth/Login";
 
 class Home extends Component {
-    state = {  }
-    render() {
-        return (
-           <>
-<div className="bg-teal-700">Home Page</div>
-<Login />
-           </> 
-        );
-    }
+  state = {};
+  render() {
+    return (
+      <>
+        <div className="bg-teal-700">Home Page</div>
+        <Login />
+      </>
+    );
+  }
 }
 
 export default Home;

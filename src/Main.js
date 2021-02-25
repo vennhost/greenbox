@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "../components/home/home";
-import Login from "./auth/login";
-import NavBar from "./nav/nav-bar";
+import Home from "./components/home/Home";
+import Login from "./components/auth/Login";
+import NavBar from "./components/nav/NavBar";
+import terms from "./pages/terms";
 
 class Main extends Component {
   state = {};
