@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-class Login extends Component {
+class Register extends Component {
   state = { email: "", password: "", isLoggedIn: false, saveSession: false };
   render() {
     return (
@@ -15,15 +15,15 @@ class Login extends Component {
                 alt="Workflow"
               />
               <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-                Sign in to your account
+                Create a new Account
               </h2>
               <p className="mt-2 text-center text-sm text-gray-600">
                 Or{" "}
                 <Link
-                  to="/auth/register"
+                  to="/auth/login"
                   className="font-medium text-green-600 hover:text-green-500"
                 >
-                  Create a new Account
+                  Sign in you account
                 </Link>
               </p>
             </div>
@@ -58,6 +58,75 @@ class Login extends Component {
                     placeholder="Password"
                   />
                 </div>
+                <div>
+                  <label for="firstname" className="sr-only">
+                    First Name
+                  </label>
+                  <input
+                    id="firstname"
+                    name="firstName"
+                    type="text"
+                    autocomplete="firstname"
+                    required
+                    className="appearance-none bg-transparent rounded-none relative block w-full px-3 py-2 border border-green-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-green-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                    placeholder="First Name"
+                  />
+                </div>
+                <div>
+                  <label for="lastname" className="sr-only">
+                    Last Name
+                  </label>
+                  <input
+                    id="lastname"
+                    name="lastName"
+                    type="text"
+                    autocomplete="lastname"
+                    required
+                    className="appearance-none bg-transparent rounded-none relative block w-full px-3 py-2 border border-green-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-green-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                    placeholder="Last Name"
+                  />
+                </div>
+                <div>
+                  <label for="phone" className="sr-only">
+                    Phone Number
+                  </label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="phone"
+                    autocomplete="phone"
+                    required
+                    className="appearance-none bg-transparent rounded-none relative block w-full px-3 py-2 border border-green-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-green-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                    placeholder="Phone Number"
+                  />
+                </div>
+                <div>
+                  <label for="phone" className="sr-only">
+                    Phone Number
+                  </label>
+                  <select
+                    id="phone"
+                    name="phone"
+                    type="phone"
+                    autocomplete="phone"
+                    required
+                    className="appearance-none bg-transparent rounded-none relative block w-full px-3 py-2 border border-green-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-green-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                    placeholder="Phone Number"
+                  >
+                    <option className="text-gray-500">
+                      Select account type
+                    </option>
+                    <option className="text-gray-500" value="Buyer">
+                      Buyer
+                    </option>
+                    <option className="text-gray-500" value="Seller">
+                      Seller
+                    </option>
+                    <option className="text-gray-500" value="Buyer&Seller">
+                      Both
+                    </option>
+                  </select>
+                </div>
               </div>
 
               <div className="flex items-center justify-between">
@@ -72,17 +141,8 @@ class Login extends Component {
                     for="remember_me"
                     className="ml-2 block text-sm text-gray-900"
                   >
-                    Remember me
+                    I accept <Link to="#">Terms And Conditions</Link>
                   </label>
-                </div>
-
-                <div className="text-sm">
-                  <Link
-                    to="#"
-                    className="font-medium text-green-600 hover:text-green-500"
-                  >
-                    Forgot your password?
-                  </Link>
                 </div>
               </div>
 
@@ -107,7 +167,7 @@ class Login extends Component {
                       />
                     </svg>
                   </span>
-                  Sign in
+                  Register
                 </button>
               </div>
             </form>
@@ -118,4 +178,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default Register;

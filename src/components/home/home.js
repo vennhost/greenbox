@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 import Login from "../auth/Login";
+import Product from "../cards/Product";
+import Seach from "../Seach";
+import HomeSlide from "./HomeSlide";
 
 class Home extends Component {
   state = {};
   render() {
     return (
       <>
-        <div className="bg-teal-700">Home Page</div>
-        <Login />
+        <HomeSlide />
+
+        <Product />
       </>
     );
   }
